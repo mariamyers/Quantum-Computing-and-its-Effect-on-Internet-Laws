@@ -1,0 +1,93 @@
+* { box-sizing: border-box; } 
+body { font-family: Arial;
+      background-image: url(backgroundPic.jpg); <!-- This changes the background for the 
+                                          main section of the document --> 
+}
+#wrapper {  background-color: #013280; <!-- This changes the color for the 
+                                          main section of the document --> 
+	        width: 80%;
+	        margin-top: auto;
+			margin-bottom: auto;
+			margin-left: 5%;
+			margin-right: 5%;
+            color: #FFFFFF;
+} 
+h1, h2 { color: #FFFFFF; 
+		  font-family: Georgia; 
+          text-shadow: 3px 3px 3px #E639FA;	}
+header { background-image: url(header.jpg);
+         background-repeat: no-repeat;   
+		 background-size: cover;
+}
+h1 { text-align: center;
+	 font-family: Georgia;
+     font-size: 300%;
+     padding: 5% 0;
+     text-shadow: 3px 3px 3px #1D39FF;	<!-- overrides the purple shadow -->
+}
+a { color: #1DDBFF; 
+	text-decoration: none;}
+
+nav { flex: 2;
+	  font-size: 120%;
+}	  
+nav ul { list-style-type: none; }
+nav li { padding: 15px; } <!-- Puts a space between the lists for nav -->
+nav a { text-decoration: none; }
+nav a:link { color: #FFFFFF; }
+nav a:visited { color: #7520D6; }
+nav a:hover { color: #E639FA; }
+
+aside { flex: 3.5;
+}
+main { flex: 4.5;
+}
+img { max-width: 100%;
+      height: auto; }
+footer { color: #FFFFFF;
+		  text-align: center;
+         font-size: 80%;
+		 font-style: italic;
+		 padding: 2.5%;
+	     clear: both; 
+}
+#flexbox { display: flex;
+        flex-direction: row;
+}
+figcaption { font-size: 50%;
+} 
+@media only screen and (max-width: 1024px) {
+          body { margin: 0; padding: 0; } 
+          #wrapper { width: auto; }
+          h1 { margin: 0; }
+           #flexbox { flex-direction: column;
+            }
+ 	      nav ul { display: flex;
+                     flex-direction: row;
+				     justify-content: center; 
+			 }
+          nav li { display: inline;
+                   margin: 0 2%; }
+          main { width: 60%;
+                   margin-left: 5%; }
+          aside { width: 30%;  }
+
+}
+@media only screen and (max-width: 768px) {
+		    h1 { font-size: 200%; }
+			main { margin: 0 5%;      
+                    width: auto;	}
+           nav { order: 0;   }
+		   nav ul { flex-wrap: wrap; }
+			nav a { display: inline-block;
+                    width: 6.5em; <!-- so it could fit "References" -->
+			        font-size: 100%;
+					text-align: center;
+					box-shadow: 2px 2px 2px #1D39FF;
+					background-color: #000000; 
+					margin: 1%;
+					padding:  2% 2%; }
+			aside { display: block; 
+					float: none;}		
+}
+header, main, nav, footer, figure, figcaption { display: block; }
